@@ -1,0 +1,30 @@
+  package package_01;
+
+
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Screenshot {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui?scenario=1");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//section[text()='Mouse Actions']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//section[text()='Click & Hold']")).click();
+		WebElement ele = driver.findElement(By.xpath("//div[@class='zoom-button ']"));
+		Actions a= new Actions(driver);
+		a.clickAndHold(ele);
+		
+		TakesScreenshot s=(TakesScreenshot)driver;
+		File src= s.getScreenshotAs(OutputType.FILE);
+		File des= new File
+		
+		
+	}
+
+}
