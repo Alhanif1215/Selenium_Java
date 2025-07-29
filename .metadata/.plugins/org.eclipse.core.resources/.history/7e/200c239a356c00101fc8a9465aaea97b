@@ -1,0 +1,48 @@
+package package_01;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import com.google.common.io.Files;
+
+public class DragDrop {
+	public static void main(String[] args) throws InterruptedException, IOException {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui?scenario=1");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//section[text()='Mouse Actions']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//section[text()='Drag & Drop']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Drag Position']")).click();
+		Thread.sleep(2000);
+		WebElement ph = driver.findElement(By.xpath("//div[text()='Mobile Charger']"));
+		
+		WebElement ploc = driver.findElement(By.xpath("//div[text()='Mobile Accessories']/.."));
+		Actions a = new Actions(driver);
+		a.dragAndDrop(ph, ploc);
+		WebElement phc = driver.findElement(By.xpath("//div[text()='Mobile Cover']"));
+		a.dragAndDrop(phc, ploc);
+		//Laptop
+		WebElement la = driver.findElement(By.xpath("//div[text()='Laptop Charger']"));
+		WebElement lloc = driver.findElement(By.xpath("//div[text()='Laptop Accessories']/.."));
+		a.dragAndDrop(la, lloc);
+		WebElement lcover = driver.findElement(By.xpath("//div[text()='Laptop Cover']"));
+		a.dragAndDrop(lcover, lloc);
+		Thread.sleep(2000);
+		TakesScreenshot s=(TakesScreenshot)driver;
+		File src= s.getScreenshotAs(OutputType.FILE);
+		File des= new File("/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/Screenshot/img.png");
+		Files.copy(src, des);
+		Thread.sleep(2500);
+	}
+}
