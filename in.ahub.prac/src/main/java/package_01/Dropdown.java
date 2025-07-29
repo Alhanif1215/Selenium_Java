@@ -1,14 +1,22 @@
   package package_01;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import com.google.common.io.Files;
+
 public class Dropdown {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://demoapps.qspiders.com/ui?scenario=1");
@@ -16,13 +24,32 @@ public class Dropdown {
 		driver.findElement(By.xpath("//section[text()='Dropdown']")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[text()='Multi Select']")).click();
+		Thread.sleep(2000);
 		WebElement ele = driver.findElement(By.xpath("//select[@id='select-multiple-native']"));
 		Select s= new Select(ele);
-		System.out.println(s.isMultiple());
+		System.out.println("Is it Multiselect: "+ s.isMultiple());
+		Thread.sleep(2100);
 		s.selectByVisibleText("Mens Cotton Jacket...");
 		s.selectByVisibleText("Solid Gold Petite Mi...");
 		s.selectByVisibleText("Opna Women's Short S...");
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[text()='Add']")).click();
-		driver.findElement(By.xpath("//td[@class='border border-black p-1 pl-2'][2]"));
+		Thread.sleep(2000);
+		List<WebElement> prices = driver.findElements(By.xpath("//tbody/tr/td[2]"));
+		double sum=0;
+		for (WebElement pr : prices) {
+			String value=pr.getText();
+			double p=Double.parseDouble(value);
+			sum =sum+p;
+		}
+		System.out.println("Total Price Is: "+ sum);
+		
+		//Extra
+		TakesScreenshot sc=(TakesScreenshot)driver;
+		File src = sc.getScreenshotAs(OutputType.FILE);
+		File desc= new File("/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/eclipse linux/com.demo.practice/in.ahub.prac/Screenshot/MultiSel.jpeg");
+		Files.copy(src, desc);
+		Thread.sleep(2000);
+		driver.quit();
    }
 }

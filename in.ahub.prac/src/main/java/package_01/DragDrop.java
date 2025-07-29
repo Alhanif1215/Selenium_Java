@@ -45,7 +45,8 @@ public class DragDrop {
 		Thread.sleep(2000);
 		TakesScreenshot s=(TakesScreenshot)driver;
 		File src= s.getScreenshotAs(OutputType.FILE);
-		File des= new File("/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/Screenshot/Drag&Drop.png");
+		File des= new File("/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/eclipse linux/"
+				+ "com.demo.practice/in.ahub.prac/Screenshot/Drag&Drop.png");
 		Files.copy(src, des);
 		Thread.sleep(2600);
 		driver.quit();

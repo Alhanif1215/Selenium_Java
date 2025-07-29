@@ -15,4 +15,18 @@
 		<item key="DIALOG_HEIGHT" value="1080"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|12.0|0|GTK|1|"/>
 	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_WIDTH" value="675"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_HEIGHT" value="776"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textEntries">
+		</list>
+		<list key="textArray">
+		</list>
+	</section>
 </section>

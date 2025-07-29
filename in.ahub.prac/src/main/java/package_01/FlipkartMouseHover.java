@@ -1,0 +1,34 @@
+package package_01;
+
+import java.io.File;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import com.google.common.io.Files;
+
+public class FlipkartMouseHover {
+
+	public static void main(String[] args) throws Exception {
+		
+	
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.flipkart.com/");
+		Thread.sleep(2000);
+		WebElement login = driver.findElement(By.xpath("//a[@title='Login']/span"));
+		Actions a = new Actions(driver);
+		a.moveToElement(login).perform();
+		TakesScreenshot s=(TakesScreenshot)driver;
+		File file = s.getScreenshotAs(OutputType.FILE);
+		File desc = new File("/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/eclipse linux/com.demo.practice/in.ahub.prac/Screenshot/flipkartLogin.pdf");
+		Files.copy(file, desc);
+		Thread.sleep(2500);
+		driver.quit();
+	}
+}
