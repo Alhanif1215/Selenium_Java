@@ -44,7 +44,7 @@ public class Dropdown {
 		}
 		System.out.println("Total Price Is: "+ sum);
 		
-		//Extra
+		//Extra 
 		TakesScreenshot sc=(TakesScreenshot)driver;
 		File src = sc.getScreenshotAs(OutputType.FILE);
 		File desc= new File("/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/eclipse linux/com.demo.practice/in.ahub.prac/Screenshot/MultiSel.jpeg");

@@ -1,0 +1,31 @@
+package package_01;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class DAppTimePicker {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui?scenario=1");
+		Thread.sleep(2500);
+		driver.findElement(By.xpath("//section[text()='Date & Time Picker']")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//section[text()='Time Picker']")).click();
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//a[text()='Time Picker Clock']")).click();
+		driver.findElement(By.id(":r3:"));
+		Thread.sleep(2000);
+		WebElement hr = driver.findElement(By.xpath("//div[@class='MuiClockPointer-thumb css-118whkv']"));
+		Thread.sleep(2000);
+		WebElement hr4 = driver.findElement(By.xpath("//span[@aria-label='4 hours']"));
+		Actions a = new Actions(driver);
+		a.dragAndDrop(hr, hr4).perform();
+		Thread.sleep(2000);
+		
+	}
+}
