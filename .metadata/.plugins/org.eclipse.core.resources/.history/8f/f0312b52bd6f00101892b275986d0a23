@@ -1,0 +1,94 @@
+package package_01;
+
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Flipkart_AddToCart {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+		driver.manage().window().maximize();
+		driver.get("https://www.flipkart.com");
+		driver.findElement(By.xpath("//input[@class='Pke_EE']")).sendKeys("iPhone 16",Keys.ENTER);
+		
+		WebElement ele = driver.findElement(By.xpath("//span[contains(text(),'Showing')]"));
+		String validate = ele.isDisplayed()?"Product ListPage is Displayed\n":"Product ListPage is Displayed\n"; 
+		System.out.println(validate);
+		String parentId= driver.getWindowHandle();
+
+		List<WebElement> allPhones = driver.findElements(By.xpath("//div[contains(text(),'Apple iPhone 16')]"));
+		
+		Iterator<WebElement> itr = allPhones.iterator();
+		boolean condition = false;
+		outerloop:
+		while(itr.hasNext()) {
+			itr.next().click();
+			
+			Set<String> windowHandles = driver.getWindowHandles();
+			for(String singleWin:windowHandles) {
+				
+					if(!singleWin.equals(parentId)) {
+					driver.switchTo().window(singleWin);
+					
+					//adding to cart
+					try {
+						WebElement addToCart = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Add to cart']")));
+						addToCart.click();
+						
+					} catch (Exception e) {
+						WebElement cartButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@class='col col-2-12 ']")));
+						cartButton.click();
+					}
+
+					//Check out of Stock
+					try {
+						
+						WebElement outOfStock = driver.findElement(By.xpath("//div[text()='Product is now out of stock.']"));
+						if(outOfStock.isDisplayed()) {
+							
+							try {
+								//Validating Cart
+								WebElement cart = driver.findElement(By.xpath("//div[@class='ZuSA--']"));
+								if(cart.isDisplayed()) {
+									System.out.println("Product is added to Cart successfully");
+									driver.close();
+									driver.switchTo().window(parentId);
+									condition = true;
+									break outerloop;
+								}
+							} catch (Exception e) {
+								// TODO: handle exception
+							}
+							driver.close();
+							driver.switchTo().window(parentId);
+						}
+					} catch (Exception e) {
+						
+						break;
+					}
+				}	
+		}
+
+	}
+		if(!condition) {
+		  //Validating Cart
+		  WebElement cart = driver.findElement(By.xpath("//div[@class='ZuSA--']"));
+		  if(cart.isDisplayed()) {
+			System.out.println("Product is added to Cart successfully");
+		  }
+		}
+		driver.quit();
+	}
+}

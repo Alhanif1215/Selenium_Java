@@ -1,0 +1,27 @@
+package package_01;
+
+import java.time.Duration;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WindowSwitchDemoapp {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui?scenario=1");
+		driver.findElement(By.xpath("//section[text()='Popups']")).click();
+		driver.findElement(By.xpath("//section[text()='Browser Windows']")).click();
+		driver.findElement(By.xpath("//a[text()='New Tab']")).click();
+		driver.findElement(By.xpath("//h2[text()='Laptop']/../button")).click();
+		String parentId= driver.getWindowHandle();
+		Set<String> windowHandles = driver.getWindowHandles();
+		
+		
+	}
+}

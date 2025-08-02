@@ -1,0 +1,40 @@
+package package_01;
+
+import org.jspecify.annotations.Nullable;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Waits {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui?scenario=1");
+		WebElement ele = driver.findElement(By.xpath("//h1[text()='Register']"));
+		Thread.sleep(1500);
+		if(ele.isDisplayed())
+			System.out.println("Registration Page is Displayed");
+		Thread.sleep(1500);
+		WebElement nametf = driver.findElement(By.xpath("//input[@placeholder='Enter your name']"));
+		@Nullable
+		String value = nametf.getAttribute("placeholder");
+		Thread.sleep(1500);
+		System.out.println(value);
+		Thread.sleep(1500);
+		WebElement emailtf = driver.findElement(By.xpath("//input[@placeholder='Enter Your Email']"));
+		@Nullable
+		String evalue = emailtf.getAttribute("placeholder");
+		Thread.sleep(1500);
+		System.out.println(evalue);
+		Thread.sleep(1500);
+		WebElement pwtf = driver.findElement(By.xpath("//input[@placeholder='Enter your password']"));
+		@Nullable
+		String pwvalue = pwtf.getAttribute("placeholder");
+		Thread.sleep(1500);
+		System.out.println(pwvalue);
+		driver.quit();
+		
+	}
+}

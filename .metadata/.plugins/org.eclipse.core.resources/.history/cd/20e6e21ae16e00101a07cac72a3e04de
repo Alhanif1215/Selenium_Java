@@ -1,0 +1,40 @@
+package package_01;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Waits {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		n
+		
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui?scenario=1");
+		
+		WebElement ele = driver.findElement(By.xpath("//h1[text()='Register']"));
+
+		if(ele.isDisplayed())
+			System.out.println("Registration Page is Displayed");
+		WebElement nametf = driver.findElement(By.xpath("//input[@placeholder='Enter your name']"));
+
+		String value = nametf.getAttribute("placeholder");
+		System.out.println(value);
+		WebElement emailtf = driver.findElement(By.xpath("//input[@placeholder='Enter Your Email']"));
+
+		String evalue = emailtf.getAttribute("placeholder");
+		System.out.println(evalue);
+		WebElement pwtf = driver.findElement(By.xpath("//input[@placeholder='Enter your password']"));
+
+		String pwvalue = pwtf.getAttribute("placeholder");
+		System.out.println(pwvalue);
+		driver.quit();
+		
+	}
+}
