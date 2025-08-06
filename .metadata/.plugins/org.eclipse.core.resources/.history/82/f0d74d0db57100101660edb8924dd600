@@ -1,0 +1,29 @@
+package package_01;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import net.bytebuddy.asm.Advice.Enter;
+
+public class HandlingFrames_Demo {
+
+	public static void main(String[] args) throws Exception {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui/frames?sublist=0");
+		driver.switchTo().frame(0);
+		driver.findElement(By.id("username")).sendKeys("hanif");
+		driver.findElement(By.id("password")).sendKeys("hanif12345");
+		driver.findElement(By.id("submitButton")).click();
+		driver.switchTo().defaultContent();
+		driver.findElement(By.xpath("//a[text()='Nested iframe']")).click();
+
+		
+	}
+}
