@@ -1,0 +1,29 @@
+package string.programming;
+
+import java.util.Scanner;
+
+public class CharacterPresentOrNot {
+
+	public static void main(String[] args) {
+		String str="java program";
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter character to search");
+		char ch = sc.next().charAt(0);
+		
+		boolean flg=false;
+		for (int i = 0; i < str.length(); i++) {
+			if(str.charAt(i)==ch) {
+				flg=true;
+				break;
+			}
+		
+		}
+		if(flg) {
+			System.out.println("Character "+ch+"is present");
+		}
+		else
+			System.out.println("Character is not present");
+		
+	}
+
+}

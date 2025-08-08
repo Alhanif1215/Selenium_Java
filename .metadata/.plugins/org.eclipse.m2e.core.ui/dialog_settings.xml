@@ -32,6 +32,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/Java Class"/>
 			<item value="/home/ahub/WorkSpace"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -74,11 +75,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="HanifJavaPractice"/>
 			<item value="Practice_ON"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="java.programming.prac"/>
 			<item value="in.ahub.prac"/>
 		</list>
 		<list key="projectNameTemplate">

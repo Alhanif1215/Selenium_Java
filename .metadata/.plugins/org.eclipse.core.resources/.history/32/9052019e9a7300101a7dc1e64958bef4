@@ -1,0 +1,8 @@
+package string.programming;
+
+public class CountDigitInString {
+	public static void main(String[] args) {
+		String str="He110 W0r16";
+	}
+
+}

@@ -1,0 +1,20 @@
+package string.programming;
+
+
+public class ReverseOnlyWordInSentence {
+	public static void main(String[] args) {
+		String str="java is a programming language";
+		String a[]=str.split(" ");
+		for (int i = 0; i < a.length; i++) {
+			String rev="";
+			for (int j = a[i].length()-1; j>=0;  j--) {
+				rev =rev+a[i].charAt(j);
+			}
+			a[i]=rev;
+		}
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(a[i]+" ");
+		}
+	}
+
+}

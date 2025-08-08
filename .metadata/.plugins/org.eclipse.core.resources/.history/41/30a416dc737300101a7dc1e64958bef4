@@ -1,0 +1,21 @@
+package string.programming;
+
+public class WordPresentOrNot {
+public static void main(String[] args) {
+	String str="java s a beautiful programming language";
+	String a[]=str.split(" ");
+	String str2="java";
+	boolean f=false;
+	for (int i = 0; i < a.length; i++) {
+		if(a[i].equals(str2)) {
+			f=true;
+			break;
+		}
+	}
+	if(f)
+		System.out.println(str2+" :is present");
+	else
+		System.out.println(str2+" :is not present");
+
+}
+}

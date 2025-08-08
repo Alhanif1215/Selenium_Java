@@ -1,0 +1,13 @@
+package java_basics.program;
+
+public class Manager {
+	public static void main(String[] args) {
+		Emp emp1 = new Emp(101, "Allen", 50000);
+		Emp emp2 = new Emp(102, "Dinga", 55000);
+		Emp emp3 = new Emp(103, "Manga", 65000);
+		emp1.display();
+		emp2.display();
+		
+	}
+
+}

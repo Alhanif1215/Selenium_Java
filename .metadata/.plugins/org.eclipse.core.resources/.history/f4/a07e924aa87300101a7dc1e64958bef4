@@ -1,0 +1,6 @@
+package java_basics.program;
+
+public class Account {
+	long acno= 918119006020l;
+
+}

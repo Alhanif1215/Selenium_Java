@@ -1,0 +1,10 @@
+package java_basics.program;
+
+public class Account {
+	long acno;
+	String iFSC;
+	String name;
+	double bal;
+	
+
+}

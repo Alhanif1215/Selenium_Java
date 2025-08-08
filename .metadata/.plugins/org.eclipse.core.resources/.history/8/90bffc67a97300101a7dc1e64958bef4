@@ -1,0 +1,8 @@
+package java_basics.program;
+
+public class Bank {
+	public static void main(String[] args) {
+		Account account1 = new Account(918119006070L, "PYTM0123456", "Allen", 500);
+	}
+
+}

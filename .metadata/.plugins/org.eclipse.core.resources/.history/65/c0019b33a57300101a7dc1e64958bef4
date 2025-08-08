@@ -1,0 +1,9 @@
+package java_basics.program;
+
+public class Emp {
+	int id;
+	String name;
+	double sal;
+	
+
+}

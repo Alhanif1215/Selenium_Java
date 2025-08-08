@@ -1,0 +1,35 @@
+package package_01;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class HandlingPopups_Demo {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui/alert?sublist=0");
+		driver.findElement(By.xpath("(//input[@type='checkbox'])[1]")).click();
+		driver.findElement(By.id("deleteButton")).click();
+		String msg = driver.switchTo().alert().getText();
+		System.out.println(msg);
+		driver.switchTo().alert().accept();
+		
+		//Prompt
+		driver.findElement(By.xpath("//a[text()='Prompt']")).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.attributeToBe(By.xpath("//a[text()='Prompt']"), "aria-current", "page"));
+		driver.findElement(By.xpath("(//input[@type='checkbox'])[3]")).click();
+		driver.findElement(By.id("deleteButton")).click();
+		driver.switchTo().alert().sendKeys("iPhone is deleted");
+		driver.switchTo().alert().accept();
+		driver.quit();
+	}
+}

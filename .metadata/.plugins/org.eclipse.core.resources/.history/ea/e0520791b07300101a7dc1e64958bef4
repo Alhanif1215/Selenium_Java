@@ -1,0 +1,23 @@
+package java_basics.program;
+
+public class Emp_ConstructorChaining {
+	int id;
+	String name;
+	double sal;
+	public Emp_ConstructorChaining(int id, String name, double sal) {
+		this(id,name);
+		this.sal = sal;
+	}
+	public Emp_ConstructorChaining(int id, String name) {
+		this(id);
+		this.name = name;
+	}
+	public Emp_ConstructorChaining(int id) {
+		super();
+		this.id = id;
+	}
+	
+	public void display() {
+		System.out.print("Id:-"+id+" Name:-"+name+"\u001B[31m Salary:-"+sal+"\u001B[0m \n");	
+	}
+}

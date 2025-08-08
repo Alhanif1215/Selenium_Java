@@ -1,0 +1,8 @@
+package java_basics.program;
+
+public class Emp_ConstructorChaining {
+	int id;
+	String name;
+	double sal;
+
+}

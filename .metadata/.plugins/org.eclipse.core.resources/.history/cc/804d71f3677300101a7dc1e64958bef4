@@ -1,0 +1,11 @@
+package string.programming;
+
+public class StringToArray {
+
+	public static void main(String[] args) {
+
+		String str="java programming";
+		
+	}
+
+}

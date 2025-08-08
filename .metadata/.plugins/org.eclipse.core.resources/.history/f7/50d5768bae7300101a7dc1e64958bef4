@@ -1,0 +1,24 @@
+package java_basics.program;
+
+public class Emp_ConstructorChaining {
+	int id;
+	String name;
+	double sal;
+	public Emp_ConstructorChaining(int id, String name, double sal) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.sal = sal;
+	}
+	public Emp_ConstructorChaining(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	public Emp_ConstructorChaining(int id) {
+		super();
+		this.id = id;
+	}
+	
+
+}

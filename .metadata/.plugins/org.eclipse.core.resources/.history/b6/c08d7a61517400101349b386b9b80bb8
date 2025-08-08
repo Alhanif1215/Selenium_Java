@@ -1,0 +1,69 @@
+package package_01;
+
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class CreateYourJobProfile {
+
+	public static void main(String[] args) throws Exception  {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui/fileUpload?sublist=0");
+		driver.findElement(By.id("fullName")).sendKeys("AHUB WhiteLine");
+		driver.findElement(By.id("emailId")).sendKeys("ahubwhiteline@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("ahub@12345");
+		driver.findElement(By.id("mobile")).sendKeys("1023456789");
+		WebElement ddsel = driver.findElement(By.id("city"));
+		Select s = new Select(ddsel);
+		s.selectByIndex(1);
+		
+		// file upload
+		StringSelection path= new StringSelection("flipkartLogin.pdf");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(path, null);
+		driver.findElement(By.id("resume")).sendKeys("/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/eclipse linux/com.demo.practice/in.ahub.prac/Screenshot/flipkartLogin.pdf");
+
+		/*driver.findElement(By.xpath("//input[@type='file']")).click();
+		
+		Robot r = new Robot();
+		r.delay(2000);
+		r.keyPress(KeyEvent.VK_CONTROL);
+		r.keyPress(KeyEvent.VK_V);
+		r.keyRelease(KeyEvent.VK_CONTROL);
+		r.keyRelease(KeyEvent.VK_V);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		r.delay(1500);
+		*/
+		
+		// multi select
+		WebElement msSel = driver.findElement(By.xpath("//select[contains(@class, 'MuiNativeSelect-select MuiNativeSelect-outlined')]"));
+		Select ms = new Select(msSel);
+		ms.selectByIndex(0);
+		Thread.sleep(2000);
+		ms.selectByIndex(1);
+		Thread.sleep(2000);
+		ms.selectByIndex(2);
+		
+		Thread.sleep(2000);
+		driver.findElement(By.id("alert")).click();
+		Thread.sleep(2000);
+		WebElement ele = driver.findElement(By.xpath("//button[@type='submit']"));
+		boolean b = ele.isEnabled();
+		System.out.println(b);
+//		driver.quit();
+		
+	}
+}

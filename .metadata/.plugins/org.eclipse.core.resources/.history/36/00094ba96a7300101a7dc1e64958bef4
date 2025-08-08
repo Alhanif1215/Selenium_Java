@@ -1,0 +1,9 @@
+package string.programming;
+
+public class StringToArrayNoMethod {
+
+	public static void main(String[] args) {
+		String str="java";
+		char a[]= new char[str.length()];
+	}
+}

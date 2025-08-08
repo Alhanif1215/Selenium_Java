@@ -1,0 +1,20 @@
+package java_basics.program;
+
+public class Account {
+	long acno;
+	String iFSC;
+	String name;
+	double bal;
+	public Account(long acno, String iFSC, String name, double bal) {
+		//super();
+		this.acno = acno;
+		this.iFSC = iFSC;
+		this.name = name;
+		this.bal = bal;
+	}
+	public void display() {
+		
+	}
+	
+
+}

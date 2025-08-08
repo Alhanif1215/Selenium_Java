@@ -1,0 +1,31 @@
+package package_01;
+
+import java.time.Duration;
+import java.util.Iterator;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class GoogleSuggestion {
+
+	public static void main(String[] args) throws Exception {
+		String search="java";
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.manage().window().maximize();
+		driver.get("https://www.google.com");
+		driver.findElement(By.name("q")).sendKeys(search);
+		List<WebElement> sug = driver.findElements(By.xpath("//span[contains(text(),'"+search+"')]"));
+		Iterator<WebElement> itr = sug.iterator();
+		while(itr.hasNext()) {
+			String text = itr.next().getText();
+			System.out.println(text);
+		}
+		sug.get(sug.size()-1).click();
+		driver.quit();
+	}
+}

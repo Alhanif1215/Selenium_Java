@@ -1,0 +1,45 @@
+package package_01;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.*;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.google.common.io.Files;
+
+public class HandlingCalendar_Demo {
+
+	public static void main(String[] args) throws Exception {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui/datePick?sublist=0");
+		
+		//Calendar;
+		Calendar cal = Calendar.getInstance();
+		//Making dynamic file name
+		Date dateSs = cal.getTime();
+		SimpleDateFormat dateFormatSs = new SimpleDateFormat("dd_hh-ss");
+		String dateStampSs = dateFormatSs.format(dateSs);
+
+		//Future 10 days
+		cal.add(Calendar.DAY_OF_MONTH, 10);
+		
+		Date date = cal.getTime();
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-YY");
+		String dateStamp = dateFormat.format(date);
+		driver.findElement(By.xpath("//div[@class='react-datepicker__input-container']/input")).sendKeys(dateStamp);
+		
+		//Screenshot
+		TakesScreenshot ss=(TakesScreenshot)driver;
+		File src = ss.getScreenshotAs(OutputType.FILE);
+		File des = new File("./Screenshot/DemoCalendarSs"+dateStampSs+".png");
+		Files.copy(src, des);
+		Thread.sleep(1800);
+		driver.quit();
+	}
+}

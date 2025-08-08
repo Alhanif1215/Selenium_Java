@@ -1,0 +1,16 @@
+package string.programming;
+
+public class PalindromeWord {
+	public static void main(String[] args) {
+		String str="ibobi";
+		String rev="";
+		for (int i = str.length()-1; i>=0 ; i--) {
+			rev += str.charAt(i);
+		}
+		if(rev.equals(str)) {
+			System.out.println("The word is palindrome");
+		}else
+			System.out.println("The word is not palindrome");
+	}
+
+}

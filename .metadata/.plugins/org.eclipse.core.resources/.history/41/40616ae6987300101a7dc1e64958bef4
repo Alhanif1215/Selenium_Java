@@ -1,0 +1,20 @@
+package string.programming;
+
+public class ReverseEvenWordInString {
+	public static void main(String[] args) {
+		String str="java is a programming language";
+		String a[]=str.split(" ");
+		for (int i = 0; i < a.length; i++) {
+			String rev="";
+			if(i%2!=0) {
+				for (int j = a[i].length(); j>=0; j--) {
+					rev += a[i].charAt(j);
+				}
+				a[i]=rev;
+			}else
+				
+			
+		}
+	}
+
+}

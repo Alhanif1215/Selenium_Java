@@ -1,0 +1,9 @@
+package string.programming;
+
+public class ReverseEvenWordInString {
+	public static void main(String[] args) {
+		String str="java is a programming language";
+		String a[]=str.split(" ");
+	}
+
+}

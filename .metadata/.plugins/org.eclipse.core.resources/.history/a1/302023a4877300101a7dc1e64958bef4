@@ -1,0 +1,8 @@
+package string.programming;
+
+public class ReverseOnlyWordInSentence {
+	public static void main(String[] args) {
+		String str="java is a programming language";
+	}
+
+}

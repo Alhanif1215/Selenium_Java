@@ -1,0 +1,9 @@
+package string.programming;
+
+public class ToUpperCase {
+	public static void main(String[] args) {
+		Striing str="Hello Duniya";
+		
+	}
+
+}

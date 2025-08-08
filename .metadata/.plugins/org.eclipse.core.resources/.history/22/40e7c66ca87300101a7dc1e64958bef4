@@ -1,0 +1,7 @@
+package java_basics.program;
+
+public class Account {
+	long acno= 918119006070L;
+	String iFSC="PYTM0123456";
+
+}

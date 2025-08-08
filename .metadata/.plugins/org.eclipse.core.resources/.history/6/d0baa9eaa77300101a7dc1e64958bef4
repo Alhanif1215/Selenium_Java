@@ -1,0 +1,18 @@
+package java_basics.program;
+
+public class Emp {
+	int id;
+	String name;
+	double sal;
+	public Emp(int id, String name, double sal) {
+		//super();
+		this.id = id;
+		this.name = name;
+		this.sal = sal;
+	}
+	public void display() {
+		System.out.print("Id:-"+id+" Name:-"+name+"\u001B[33m Salary:-"+sal+"\n\n");	
+	}
+	
+
+}
