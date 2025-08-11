@@ -1,0 +1,23 @@
+package package_01;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class UploadNDelete {
+
+	public static void main(String[] args) throws Exception  {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		driver.manage().window().maximize();
+		driver.get("https://demoapps.qspiders.com/ui/fileUpload/multiple?sublist=3");
+		driver.findElement(By.id("fileInput")).sendKeys("/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/eclipse linux/com.demo.practice/in.ahub.prac/Screenshot/flipkartLogin.pdf");
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("//li/*[name()='svg']")).click();
+		Thread.sleep(2500);
+		driver.quit();
+	}
+}

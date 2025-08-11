@@ -31,8 +31,9 @@ public class CreateYourJobProfile {
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(path, null);
 		driver.findElement(By.id("resume")).sendKeys("/media/ahub/9f6e90fe-dd38-4c6f-8e80-5e926fab903e/eclipse linux/com.demo.practice/in.ahub.prac/Screenshot/flipkartLogin.pdf");
 
-		/*driver.findElement(By.xpath("//input[@type='file']")).click();
 		
+		// We cannot use Robot class for <input> tag
+		/*driver.findElement(By.xpath("//input[@type='file']")).click();
 		Robot r = new Robot();
 		r.delay(2000);
 		r.keyPress(KeyEvent.VK_CONTROL);

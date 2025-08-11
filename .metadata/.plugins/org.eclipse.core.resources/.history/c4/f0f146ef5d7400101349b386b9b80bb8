@@ -1,0 +1,25 @@
+package string.programming;
+
+public class CountAllTypesInString {
+	public static void main(String[] args) {
+		String str="HoW ARE Y0u b2I&Y AND baba1Aj1";
+		String strnw="";
+		int up,lw,sp,ws=0;
+		
+		for (int i = 0; i < str.length(); i++) {
+			char ch=str.charAt(i);
+			if(ch>='A' && ch<='Z') {
+				up++;
+			}
+			else if(ch>='A' && ch<='Z') {
+				lw++;
+			}
+			else if(ch == ' ') {
+				ws++;
+			}
+			else
+				sp++;
+		}
+		System.out.println("UpperCase: "+up+" ");
+	}
+}

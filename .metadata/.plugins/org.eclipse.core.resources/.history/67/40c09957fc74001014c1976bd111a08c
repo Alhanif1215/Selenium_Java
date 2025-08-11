@@ -1,0 +1,21 @@
+package package_01;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Insta_DisabledLogin {
+
+	public static void main(String[] args) throws Exception  {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		driver.manage().window().maximize();
+		driver.get("https://www.instagram.com/");
+		driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div[1]/div[3]/button"));
+		
+		
+	}
+}

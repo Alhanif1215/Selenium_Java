@@ -34,6 +34,6 @@ public class FileUpload_NoInputTag {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 		r.delay(1500);
-//		driver.quit();
+		driver.quit();
 	}
 }

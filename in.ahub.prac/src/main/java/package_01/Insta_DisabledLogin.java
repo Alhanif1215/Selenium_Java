@@ -1,0 +1,49 @@
+package package_01;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.google.common.io.Files;
+
+
+public class Insta_DisabledLogin {
+
+	public static void main(String[] args) throws Exception  {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		driver.manage().window().maximize();
+		driver.get("https://www.instagram.com/");
+		WebElement login = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div[1]/div[3]/button"));
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		//js Executor doesn't work
+		jse.executeScript("arguments[0].click();",login);
+		
+		
+		//Calendar;
+		Calendar cal = Calendar.getInstance();
+		//Making dynamic file name
+		Date dateSs = cal.getTime();
+		SimpleDateFormat dateFormatSs = new SimpleDateFormat("dd_hh-ss");
+		String dateStampSs = dateFormatSs.format(dateSs);
+		
+		//Screenshot
+		TakesScreenshot ss=(TakesScreenshot)driver;
+		File src = ss.getScreenshotAs(OutputType.FILE);
+		File des = new File("./Screenshot/InstaLogin"+dateStampSs+".png");
+		Files.copy(src, des);
+		Thread.sleep(1800);
+		driver.quit();	
+	}
+}
