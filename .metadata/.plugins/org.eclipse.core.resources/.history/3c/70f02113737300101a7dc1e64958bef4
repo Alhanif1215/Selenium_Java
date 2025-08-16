@@ -1,7 +1,0 @@
-package string.programming;
-
-public class WordPresentOrNot {
-public static void main(String[] args) {
-	
-}
-}

@@ -1,9 +1,0 @@
-package string.programming;
-
-public class UpToLowercase {
-	private void mian() {
-		// TODO Auto-generated method stub
-
-	}
-
-}

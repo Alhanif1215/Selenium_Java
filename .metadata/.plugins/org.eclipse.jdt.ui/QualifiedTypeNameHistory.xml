@@ -41,4 +41,13 @@
     <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
     <fullyQualifiedTypeName name="java.util.TreeMap"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Cell"/>
+    <fullyQualifiedTypeName name="sun.awt.image.FileImageSource"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.DataFormatter"/>
+    <fullyQualifiedTypeName name="org.odftoolkit.odfdom.doc.OdfSpreadsheetDocument"/>
+    <fullyQualifiedTypeName name="genericUtility.IPathUtility"/>
+    <fullyQualifiedTypeName name="org.apache.poi.sl.usermodel.Sheet"/>
+    <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Sheet"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

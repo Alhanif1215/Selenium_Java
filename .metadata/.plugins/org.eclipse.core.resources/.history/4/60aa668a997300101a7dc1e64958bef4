@@ -1,9 +1,0 @@
-package string.programming;
-
-public class PalindromeWord {
-	public static void main(String[] args) {
-		String str="World";
-		
-	}
-
-}
