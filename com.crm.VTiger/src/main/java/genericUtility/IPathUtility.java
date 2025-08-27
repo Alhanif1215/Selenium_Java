@@ -3,7 +3,7 @@ package genericUtility;
 public interface IPathUtility {
 	
 	String excelPath = "/home/ahub/Documents/TestData.xlsx";//TestData.xlsx
-	String propertiesPath = "/home/ahub/Documents/TestData.properties";//TestData.properties
+	String propertiesPath = "./src/test/resources/TestData/VTigerTestData.properties";
+	String vtigerExcelPath = "./src/test/resources/TestData/VTigerTestData.xlsx";
 	
-
 }
