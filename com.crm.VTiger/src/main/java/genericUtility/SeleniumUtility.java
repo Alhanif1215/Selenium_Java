@@ -113,7 +113,7 @@ public class SeleniumUtility {
 	public void mouseHoveringAction(WebDriver driver, WebElement element)
 	{
 		Actions a = new Actions(driver);
-		a.moveToElement(element);
+		a.moveToElement(element).perform();
 	}
 	
 	/**

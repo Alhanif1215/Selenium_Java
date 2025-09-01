@@ -18,10 +18,10 @@ public class FetchingDataFromExcelFile {
 //		System.out.println(value);
 		
 		ExcelUtility eUtilty = new ExcelUtility();
-		String value = eUtilty.getDataFromExcelFile("Animal", 0, 0);
+		String value = eUtilty.getSingleDataFromExcelFile("Animal", 0, 0);
 		System.out.println(value);
 		
-		String string = eUtilty.getDataFromExcelFile("Fish", 1, 1);
+		String string = eUtilty.getSingleDataFromExcelFile("Fish", 1, 1);
 		System.out.println(string);
 		
 	}

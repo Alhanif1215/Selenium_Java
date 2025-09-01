@@ -28,9 +28,9 @@ public class ExcelUtility {
 	 * @return
 	 * @throws Exception
 	 */
-	public String getDataFromExcelFile(String sheetName, int rowIndex, int cellIndex) throws Exception 
+	public String getSingleDataFromExcelFile(String sheetName, int rowIndex, int cellIndex) throws Exception 
 	{
-		FileInputStream fis = new FileInputStream(IPathUtility.excelPath);
+		FileInputStream fis = new FileInputStream(IPathUtility.vtigerExcelPath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Cell cell = wb.getSheet(sheetName).getRow(rowIndex).getCell(cellIndex);
 		DataFormatter df = new DataFormatter();
@@ -49,7 +49,7 @@ public class ExcelUtility {
 	
 	public List<String> getMultipleDataFromExcelFile(String sheetname, int rowStartIndex, int cellStartIndex) throws Exception
 	{
-		FileInputStream fis = new FileInputStream(IPathUtility.excelPath);
+		FileInputStream fis = new FileInputStream(IPathUtility.vtigerExcelPath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(sheetname);
 		

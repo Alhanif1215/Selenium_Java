@@ -12,37 +12,37 @@ public class CreatingNewLeadPage {
 	@FindBy(xpath = "//input[@name='firstname']")
 	private WebElement firstNameTextField;
 	
-	@FindBy(name = "firstname")
+	@FindBy(name = "lastname")
 	private WebElement lastNameTextField;
 	
 	@FindBy(xpath = "//input[@name='company']")
 	private WebElement companyTextField;
 	
-	@FindBy(xpath = "//select[@name='leadsource']")
+	@FindBy(xpath = "//select[@name='leadsource']")//Little wrong
 	private WebElement leadSourceDropdown;
 	
-	@FindBy(id = "noOfEmployees")
+	@FindBy(name = "noofemployees")
 	private WebElement noOfEmployeesTextField;
 	
-	@FindBy(id = "mobile")
+	@FindBy(name = "mobile")
 	private WebElement mobileTextField;
 	
 	@FindBy(xpath = "//input[@name='designation']")
 	private WebElement titleTextField;
 	
-	@FindBy(xpath = "//input[@id='email']")
+	@FindBy(xpath = "//input[@name='email']")
 	private WebElement emailTextField;
 	
-	@FindBy(xpath = "//input[@id='country']")
+	@FindBy(xpath = "//input[@name='country']")
 	private WebElement countryTextField;
 	
-	@FindBy(xpath = "//input[@id='state']")
+	@FindBy(xpath = "//input[@name='state']")
 	private WebElement stateTextField;
 	
-	@FindBy(xpath = "//input[@id='city']")
+	@FindBy(xpath = "//input[@name='city']")
 	private WebElement cityTextField;
 	
-	@FindBy(xpath = "//input[@title='Save [Alt+S]']")
+	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement saveButton;
 	
 	

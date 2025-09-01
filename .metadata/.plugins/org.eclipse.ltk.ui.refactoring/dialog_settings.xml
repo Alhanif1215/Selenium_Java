@@ -12,4 +12,15 @@
 		<item key="moveWizard.updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>
 	</section>
+	<section name="RefactoringWizard.Convert from JUnit">
+		<item key="width" value="893"/>
+		<item key="height" value="561"/>
+	</section>
+	<section name="ConvertFromJUnitWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="514"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="899"/>
+		<item key="DIALOG_HEIGHT" value="822"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|12.0|0|GTK|1|"/>
+	</section>
 </section>

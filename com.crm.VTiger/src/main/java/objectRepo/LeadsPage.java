@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LeadsPage {
 
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//button[@id='Leads_listView_basicAction_LBL_ADD_RECORD']")
 	private WebElement createNewLeadIcon;
 	
 	public LeadsPage(WebDriver driver)

@@ -30,6 +30,12 @@
         <artifactId>poi-ooxml</artifactId>
         <version>5.4.1</version>
     </dependency>
+    
+     <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.11.0</version>
+     </dependency>
 
     <!-- Optional: include if you need full schema support -->
     <!--
@@ -51,12 +57,6 @@
     <scope>runtime</scope>
 </dependency>
 
-
-   	<dependency>
-   		<groupId>VTiger</groupId>
-   		<artifactId>com.crm.VTiger</artifactId>
-   		<version>0.0.1-SNAPSHOT</version>
-   	</dependency>
    </dependencies>
 
   

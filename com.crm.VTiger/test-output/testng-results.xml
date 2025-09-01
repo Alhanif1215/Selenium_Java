@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-01T19:12:51 IST" name="Default suite" finished-at="2025-09-01T19:13:21 IST" duration-ms="30220">
+    <groups>
+    </groups>
+    <test started-at="2025-09-01T19:12:51 IST" name="Default test" finished-at="2025-09-01T19:13:21 IST" duration-ms="30220">
+      <class name="testCaseRepo.TC_006">
+        <test-method is-config="true" signature="dbConnection()[pri:0, instance:testCaseRepo.TC_006@28701274]" started-at="2025-09-01T19:12:51 IST" name="dbConnection" finished-at="2025-09-01T19:12:51 IST" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dbConnection -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testCaseRepo.TC_006@28701274]" started-at="2025-09-01T19:12:51 IST" name="launchBrowser" finished-at="2025-09-01T19:12:59 IST" duration-ms="8020" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="logiinOperation()[pri:0, instance:testCaseRepo.TC_006@28701274]" started-at="2025-09-01T19:12:59 IST" name="logiinOperation" finished-at="2025-09-01T19:13:01 IST" duration-ms="1664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logiinOperation -->
+        <test-method signature="CON_003()[pri:0, instance:testCaseRepo.TC_006@28701274]" started-at="2025-09-01T19:13:01 IST" name="CON_003" finished-at="2025-09-01T19:13:18 IST" duration-ms="17093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CON_003 -->
+        <test-method is-config="true" signature="logoutOperation()[pri:0, instance:testCaseRepo.TC_006@28701274]" started-at="2025-09-01T19:13:18 IST" name="logoutOperation" finished-at="2025-09-01T19:13:21 IST" duration-ms="2576" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutOperation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testCaseRepo.TC_006@28701274]" started-at="2025-09-01T19:13:21 IST" name="closeBrowser" finished-at="2025-09-01T19:13:21 IST" duration-ms="544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="disconnectDB()[pri:0, instance:testCaseRepo.TC_006@28701274]" started-at="2025-09-01T19:13:22 IST" name="disconnectDB" finished-at="2025-09-01T19:13:22 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disconnectDB -->
+      </class> <!-- testCaseRepo.TC_006 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -33,9 +33,8 @@
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
-			<item value="org.eclipse.jst.j2ee.internal"/>
 			<item value="org.eclipse.jpt.jaxb"/>
-			<item value="org.eclipse.jst.ws.ui.new"/>
+			<item value="org.testng.eclipse"/>
 		</list>
 		<section name="NewWizard.dialogBounds">
 		</section>
@@ -46,8 +45,21 @@
 		<item key="uncategorizedFilter" value="true"/>
 	</section>
 	<section name="EditorSelectionDialog">
-		<item key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION" value=".xlsx"/>
-		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="false"/>
-		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="org.eclipse.wst.xsl.ui.XSLEditor"/>
+		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="true"/>
+		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="LibreOffice Calc"/>
+	</section>
+	<section name="FileExtensionDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="160"/>
+		<item key="DIALOG_Y_ORIGIN" value="251"/>
+		<item key="DIALOG_WIDTH" value="788"/>
+		<item key="DIALOG_HEIGHT" value="431"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|12.0|0|GTK|1|"/>
+	</section>
+	<section name="ContentTypeFilenameAssociationDialog">
+		<item key="DIALOG_X_ORIGIN" value="160"/>
+		<item key="DIALOG_Y_ORIGIN" value="251"/>
+		<item key="DIALOG_WIDTH" value="788"/>
+		<item key="DIALOG_HEIGHT" value="431"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|12.0|0|GTK|1|"/>
 	</section>
 </section>

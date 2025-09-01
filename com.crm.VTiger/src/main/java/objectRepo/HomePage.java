@@ -9,17 +9,22 @@ import genericUtility.SeleniumUtility;
 
 public class HomePage {
 
+	@FindBy(xpath = "//span[@class='app-icon fa fa-bars']")
+	private WebElement hamburgerMenu;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//span[text()=' MARKETING']")
+	private WebElement marketingMenu;
+	
+	@FindBy(xpath = "//a[@title='Leads']")
 	private WebElement leadsMenu;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "(//i[@class='vicon-contacts'])[2]")
 	private WebElement contactMenu;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//span[@title='Hanif Makakmayum(admin)']")
 	private WebElement accountsIcon;
 	
-	@FindBy(xpath = "")
+	@FindBy(xpath = "//a[@id='menubar_item_right_LBL_SIGN_OUT']")
 	private WebElement signOutOption;
 	
 	
@@ -29,6 +34,15 @@ public class HomePage {
 	}
 
 
+	public WebElement getHamburgerMenu() {
+		return hamburgerMenu;
+	}
+	
+	public WebElement getMarketingMenu() {
+		return marketingMenu;
+	}
+
+	
 	public WebElement getLeadsMenu() {
 		return leadsMenu;
 	}
@@ -48,6 +62,23 @@ public class HomePage {
 		return signOutOption;
 	}
 	
+	/**
+	 * This is a business library to click on Hamburger Menu
+	 */
+	public void clickOnHamburgerMenu()
+	{
+		getHamburgerMenu().click();
+	}
+	
+	/**
+	 * This is a business library to hover on Marketing Menu
+	 */
+	public void mouseHoverOnMarketingMenu(WebDriver driver)
+	{
+		SeleniumUtility sUtil = new SeleniumUtility();
+		sUtil.mouseHoveringAction(driver, getMarketingMenu());
+	}
+	
 	
 	/**
 	 * This is a business library to click on Leads menu
@@ -65,10 +96,13 @@ public class HomePage {
 		getContactMenu().click();
 	}
 	
+	public void clickOnAccounIcon(WebDriver driver)
+	{
+		getAccountsIcon().click();
+	}
+	
 	public void signOutOperation(WebDriver driver)
 	{
-		SeleniumUtility sUtil = new SeleniumUtility();
-		sUtil.mouseHoveringAction(driver, getAccountsIcon());
 		getSignOutOption().click();
 	}
 }

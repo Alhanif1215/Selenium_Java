@@ -9,9 +9,9 @@
 	</section>
 	<section name="NewPackageCreationWizard.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="569"/>
-		<item key="DIALOG_Y_ORIGIN" value="213"/>
+		<item key="DIALOG_Y_ORIGIN" value="217"/>
 		<item key="DIALOG_WIDTH" value="788"/>
-		<item key="DIALOG_HEIGHT" value="500"/>
+		<item key="DIALOG_HEIGHT" value="514"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|12.0|0|GTK|1|"/>
 	</section>
 	<section name="NewPackageWizardPage">
@@ -20,8 +20,8 @@
 	<section name="NewClassCreationWizard.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="569"/>
 		<item key="DIALOG_Y_ORIGIN" value="217"/>
-		<item key="DIALOG_WIDTH" value="810"/>
-		<item key="DIALOG_HEIGHT" value="811"/>
+		<item key="DIALOG_WIDTH" value="838"/>
+		<item key="DIALOG_HEIGHT" value="839"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|12.0|0|GTK|1|"/>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
@@ -62,10 +62,10 @@
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|12.0|0|GTK|1|"/>
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item key="pageIndex" value="0"/>
+		<item key="pageIndex" value="2"/>
 	</section>
 	<section name="ClasspathContainerSelectionPage">
-		<item key="index" value="2"/>
+		<item key="index" value="3"/>
 	</section>
 	<section name="ProblemSeveritiesConfigurationBlock">
 		<item key="expanded0" value="false"/>

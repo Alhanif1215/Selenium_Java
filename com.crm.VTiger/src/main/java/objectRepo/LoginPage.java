@@ -8,18 +8,18 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 
 	//Declaration of WebElements
-	@FindBy(xpath = "//input[@name='user-name']")
+	@FindBy(xpath = "//input[@name='username']")
 	private WebElement usernameTextField;
 	
 	@FindBy(xpath = "//input[@type='password']")
 	private WebElement passwordTextField;
 	
-	@FindBy(xpath = "//input[@id='submitButton']")
+	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement loginButton;
 	
 	
 	//Initialisation of WebElements
-	public void loginPage(WebDriver driver)
+	public LoginPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}

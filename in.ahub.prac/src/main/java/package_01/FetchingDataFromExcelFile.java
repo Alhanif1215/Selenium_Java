@@ -1,7 +1,5 @@
 package package_01;
 
-import genericUtility.ExcelUtility;
-
 public class FetchingDataFromExcelFile {
 	
 	public static void main(String[] args) throws Exception {
@@ -17,12 +15,12 @@ public class FetchingDataFromExcelFile {
 //		String value = df.formatCellValue(cell);
 //		System.out.println(value);
 		
-		ExcelUtility eUtilty = new ExcelUtility();
-		String value = eUtilty.getDataFromExcelFile("Animal", 0, 0);
-		System.out.println(value);
-		
-		String string = eUtilty.getDataFromExcelFile("Fish", 1, 1);
-		System.out.println(string);
+//		ExcelUtility eUtilty = new ExcelUtility();
+//		String value = eUtilty.getDataFromExcelFile("Animal", 0, 0);
+//		System.out.println(value);
+//		
+//		String string = eUtilty.getDataFromExcelFile("Fish", 1, 1);
+//		System.out.println(string);
 		
 	}
 

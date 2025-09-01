@@ -11,34 +11,34 @@ public class CreatingNewContactPage {
 	@FindBy(name= "firstname")	   
 	private WebElement firstNameTextField;
 	
-	@FindBy(name= "firstname")
+	@FindBy(name= "lastname")
 	private WebElement lastNameTextField;
 
-	@FindBy(xpath = "//input[@name='company']")
+	@FindBy(xpath = "//input[@name='account_id_display']")
 	private WebElement organizationNameTextField;
 	
-	@FindBy(id = "noOfEmployees")
+	@FindBy(name = "title")
 	private WebElement titleTextField;
 	
-	@FindBy(id = "noOfEmployees")
+	@FindBy(name = "department")
 	private WebElement departmentTextField;
 	
-	@FindBy(xpath = "//input[@id='email']")
+	@FindBy(name="email")
 	private WebElement emailTextField;
 	
-	@FindBy(xpath = "//input[@id='email']")
+	@FindBy(name="phone")
 	private WebElement mobileTextField;
 	
-	@FindBy(xpath = "//input[@id='email']")
+	@FindBy(xpath = "//input[@data-fieldname='mailingcity']")
 	private WebElement mailingCityTextField;
 	
-	@FindBy(xpath = "//input[@id='country']")
+	@FindBy(xpath = "//input[@id='Contacts_editView_fieldName_mailingcountry']")
 	private WebElement mailingCountryTextField;
 	
-	@FindBy(xpath = "//input[@id='state']")
+	@FindBy(xpath = "//input[@id='Contacts_editView_fieldName_mailingcity']")
 	private WebElement mailingStateTextField;
 	
-	@FindBy(xpath = "//input[@title='Save [Alt+S]']")
+	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement saveButton;
 	
 	public CreatingNewContactPage(WebDriver driver)
@@ -104,6 +104,14 @@ public class CreatingNewContactPage {
 		getSaveButton().click();
 	}
 	
+	/**
+	 * This is business library to create new contact
+	 * @param lName
+	 * @param title
+	 * @param dept
+	 * @param email
+	 * @param mobile
+	 */
 	public void createNewContact(String lName, String title, String dept, String email, String mobile)
 	{
 		getLastNameTextField().sendKeys(lName);
@@ -124,7 +132,7 @@ public class CreatingNewContactPage {
 	 * @param city
 	 * @param state
 	 */
-	public void createNewLead(String lName, String dept, String mobile, String email, String mailingCountry , String mailingCity, String mailingState)
+	public void createNewContact(String lName, String dept, String mobile, String email, String mailingCountry , String mailingCity, String mailingState)
 	{
 		getLastNameTextField().sendKeys(lName);
 		getDepartmentTextField().sendKeys(dept);
