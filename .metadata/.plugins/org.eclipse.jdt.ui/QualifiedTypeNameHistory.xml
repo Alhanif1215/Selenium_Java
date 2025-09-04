@@ -10,7 +10,6 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
     <fullyQualifiedTypeName name="java.awt.Robot"/>
-    <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
     <fullyQualifiedTypeName name="collectionFrameWork.HashMap"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -42,7 +41,6 @@
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="org.testng.Assert"/>
-    <fullyQualifiedTypeName name="genericUtility.SeleniumUtility"/>
     <fullyQualifiedTypeName name="org.testng.annotations.BeforeSuite"/>
     <fullyQualifiedTypeName name="org.testng.annotations.BeforeClass"/>
     <fullyQualifiedTypeName name="org.testng.annotations.BeforeMethod"/>
@@ -58,6 +56,8 @@
     <fullyQualifiedTypeName name="org.testng.annotations.AfterClass"/>
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeOptions"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="genericUtility.BaseClass"/>
+    <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
+    <fullyQualifiedTypeName name="genericUtility.SeleniumUtility"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>

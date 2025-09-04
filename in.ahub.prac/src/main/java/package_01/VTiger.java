@@ -4,15 +4,15 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class VTiger {
 
 	public static void main(String[] args) {
 		
-		
-		ChromeDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.gecko.driver", "/snap/bin/geckodriver");
+		FirefoxDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("http://localhost/");
