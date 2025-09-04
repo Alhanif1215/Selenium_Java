@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCaseRepo.TC_002">
+      <class name="testCaseRepo.TC_004">
         <methods>
           <include name="dbConnection"/>
           <include name="logoutOperation"/>
-          <include name="LE_002"/>
           <include name="closeBrowser"/>
           <include name="launchBrowser"/>
           <include name="logiinOperation"/>
           <include name="disconnectDB"/>
+          <include name="CON_001"/>
         </methods>
-      </class> <!-- testCaseRepo.TC_002 -->
+      </class> <!-- testCaseRepo.TC_004 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

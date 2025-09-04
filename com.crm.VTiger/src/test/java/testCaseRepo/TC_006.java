@@ -9,7 +9,7 @@ import objectRepo.HomePage;
 
 public class TC_006 extends BaseClass{
 
-	@Test
+	@Test(groups = {"Regression"})
 	public void CON_003() throws Exception
 	{
 		HomePage hp = new HomePage(driver);

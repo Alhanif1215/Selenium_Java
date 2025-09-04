@@ -1,10 +1,14 @@
 package objectRepo;
 
 
+import java.awt.AWTException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import genericUtility.SeleniumUtility;
 
 public class CreatingNewContactPage {
 	
@@ -95,12 +99,17 @@ public class CreatingNewContactPage {
 	 * @param fName
 	 * @param lName
 	 * @param orgName
+	 * @throws InterruptedException 
+	 * @throws AWTException 
 	 */
-	public void createNewContact(String fName, String lName, String orgName)
+	public void createNewContact(String fName, String lName, String orgName) throws InterruptedException, AWTException
 	{
 		getFirstNameTextField().sendKeys(fName);
 		getLastNameTextField().sendKeys(lName);
 		getOrganizationNameTextField().sendKeys(orgName);
+		Thread.sleep(1000);
+		SeleniumUtility sUtil = new SeleniumUtility();
+		sUtil.pressDownNEnterx2();
 		getSaveButton().click();
 	}
 	

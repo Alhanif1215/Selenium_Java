@@ -9,7 +9,7 @@ import objectRepo.LeadsPage;
 
 public class TC_001 extends BaseClass{
 
-	@Test
+	@Test(groups = {"Smoke", "Sanity"})
 	public void LE_001() throws Exception
 	{
 		HomePage hp = new HomePage(driver);

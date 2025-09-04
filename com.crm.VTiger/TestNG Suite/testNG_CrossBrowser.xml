@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel = "tests" name="CrossBrowser_Suite">
+	<test thread-count="5" name="Test1">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="testCaseRepo.TC_002" />
+			<class name="testCaseRepo.TC_004" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Test2">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="testCaseRepo.TC_001" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- CrossBrowser_Suite -->

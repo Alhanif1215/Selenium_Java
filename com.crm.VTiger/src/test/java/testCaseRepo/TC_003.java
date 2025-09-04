@@ -8,7 +8,8 @@ import objectRepo.HomePage;
 import objectRepo.LeadsPage;
 
 public class TC_003 extends BaseClass{
-	@Test
+	
+	@Test(groups = {"Smoke", "Regression"})
 	public void LE_003() throws Exception
 	{
 		HomePage hp = new HomePage(driver);

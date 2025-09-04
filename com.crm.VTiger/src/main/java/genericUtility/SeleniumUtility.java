@@ -1,5 +1,8 @@
 package genericUtility;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -158,5 +161,19 @@ public class SeleniumUtility {
 	{
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollTo("+x+","+y+");");
+	}
+	
+	public void pressDownNEnterx2() throws AWTException, InterruptedException
+	{
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(1000);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+
 	}
 }
