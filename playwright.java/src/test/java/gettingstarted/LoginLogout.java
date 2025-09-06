@@ -10,7 +10,7 @@ public class LoginLogout {
 
 	public static void main(String[] args) {
 
-		Browser browser = Playwright.create().chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+		Browser browser = Playwright.create().chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
 		Page page = browser.newPage();
 		page.navigate("https://freelance-learn-automation.vercel.app/login");
 		

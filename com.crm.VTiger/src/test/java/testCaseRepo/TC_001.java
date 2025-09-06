@@ -1,5 +1,6 @@
 package testCaseRepo;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import genericUtility.BaseClass;
@@ -7,6 +8,7 @@ import objectRepo.CreatingNewLeadPage;
 import objectRepo.HomePage;
 import objectRepo.LeadsPage;
 
+@Listeners(genericUtility.ListenersImplementation.class)
 public class TC_001 extends BaseClass{
 
 	@Test(groups = {"Smoke", "Sanity"})

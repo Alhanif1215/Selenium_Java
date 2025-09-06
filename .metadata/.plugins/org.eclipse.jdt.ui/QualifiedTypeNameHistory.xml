@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java_basics.program.Emp"/>
-    <fullyQualifiedTypeName name="java_basics.program.Emp_ConstructorChaining"/>
-    <fullyQualifiedTypeName name="java.awt.datatransfer.StringSelection"/>
-    <fullyQualifiedTypeName name="java.awt.Toolkit"/>
-    <fullyQualifiedTypeName name="java.lang.AssertionError"/>
-    <fullyQualifiedTypeName name="com.sun.tools.javac.util.Assert"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.utilities.Assert"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
-    <fullyQualifiedTypeName name="java.awt.Robot"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
-    <fullyQualifiedTypeName name="collectionFrameWork.HashMap"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
     <fullyQualifiedTypeName name="java.util.TreeMap"/>
     <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Cell"/>
     <fullyQualifiedTypeName name="sun.awt.image.FileImageSource"/>
@@ -49,7 +34,6 @@
     <fullyQualifiedTypeName name="objectRepo.LeadsPage"/>
     <fullyQualifiedTypeName name="objectRepo.CreatingNewLeadPage"/>
     <fullyQualifiedTypeName name="objectRepo.HomePage"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
     <fullyQualifiedTypeName name="org.testng.annotations.AfterSuite"/>
@@ -58,6 +42,22 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeOptions"/>
     <fullyQualifiedTypeName name="genericUtility.BaseClass"/>
     <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
-    <fullyQualifiedTypeName name="genericUtility.SeleniumUtility"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Parameters"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.edge.EdgeDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.chromium.ChromiumDriverCommandExecutor"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Optional"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.TakesScreenshot"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.OutputType"/>
+    <fullyQualifiedTypeName name="com.google.common.io.Files"/>
+    <fullyQualifiedTypeName name="org.testng.ITestListener"/>
+    <fullyQualifiedTypeName name="org.testng.Reporter"/>
+    <fullyQualifiedTypeName name="genericUtility.JavaUtility"/>
+    <fullyQualifiedTypeName name="genericUtility.SeleniumUtility"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Listeners"/>
+    <fullyQualifiedTypeName name="genericUtility.ListenersImplementation"/>
+    <fullyQualifiedTypeName name="com.aventstack.extentreports.reporter.ExtentSparkReporter"/>
+    <fullyQualifiedTypeName name="com.aventstack.extentreports.reporter.configuration.Theme"/>
 </qualifiedTypeNameHistroy>

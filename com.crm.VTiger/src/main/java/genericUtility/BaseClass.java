@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import objectRepo.HomePage;
 import objectRepo.LoginPage;
 
@@ -24,6 +25,7 @@ public class BaseClass {
 	public PropertiesUtility pUtil = new PropertiesUtility();
 	public ExcelUtility eUtil = new ExcelUtility();
 	public WebDriver driver;
+	public static WebDriver sDriver;
 
 	@BeforeSuite(alwaysRun = true)
 	public void dbConnection() {
@@ -38,6 +40,8 @@ public class BaseClass {
 //		opt.addArguments("--disabled-gpu");
 //		opt.addArguments("--incognito");
 
+		WebDriverManager.chromedriver().setup();
+		
 		if (browser.equals("chrome"))
 			driver = new ChromeDriver();
 		else if (browser.equals("firefox")) {
@@ -48,7 +52,8 @@ public class BaseClass {
 			driver = new EdgeDriver();
 		else
 			driver = new ChromeDriver();
-
+		sDriver = driver;
+		
 		sUtil.mazimizeWindow(driver);
 		sUtil.implicitWait(driver, 10);
 		String URL = pUtil.getDataFromPropertiesFile("url");

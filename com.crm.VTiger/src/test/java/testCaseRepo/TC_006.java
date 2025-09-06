@@ -1,5 +1,6 @@
 package testCaseRepo;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import genericUtility.BaseClass;
@@ -7,6 +8,7 @@ import objectRepo.ContactsPage;
 import objectRepo.CreatingNewContactPage;
 import objectRepo.HomePage;
 
+@Listeners(genericUtility.ListenersImplementation.class)
 public class TC_006 extends BaseClass{
 
 	@Test(groups = {"Regression"})

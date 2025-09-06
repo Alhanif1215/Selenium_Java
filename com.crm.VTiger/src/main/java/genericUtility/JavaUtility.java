@@ -15,11 +15,11 @@ public class JavaUtility {
 	 * @param pattern
 	 * @return
 	 */
-	public String getCalenderDetails(String pattern)
+	public String getCalendarDetails(String pattern)
 	{
 		Calendar cal = Calendar.getInstance();
 		Date d = cal.getTime();
-		SimpleDateFormat sdf = new SimpleDateFormat();
+		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
 		String vlaue = sdf.format(d);
 		return vlaue;
 	}
