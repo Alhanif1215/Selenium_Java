@@ -8,6 +8,8 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
@@ -15,7 +17,9 @@ public class ListenersImplementation implements ITestListener {
 
 	JavaUtility jUtil = new JavaUtility();
 	String dateTimeStamp = jUtil.getCalendarDetails("dd-MM-YYYY | hh-mm-ss");
+	
 	ExtentReports reports;
+	ExtentTest test;
 	
 	
 	@Override
@@ -24,14 +28,20 @@ public class ListenersImplementation implements ITestListener {
 		String methodName = result.getMethod().getMethodName();
 		System.out.println(methodName + " Test Method Started");
 		Reporter.log(methodName + " Test Method Started");
+		
+		//Creating field in the extent reports for every method getting executed
+		test = reports.createTest(methodName);
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 
-		String methodName = result.getMethod().getMethodName();
-		System.out.println(methodName + " Test Method Executed Successfully");
-		Reporter.log(methodName + " Test Method Executed Successfully");
+		String methodName = result.getMethod().getMethodName();  //Fetching method name 
+		System.out.println(methodName + " Test Method Executed Successfully"); //Console output
+		Reporter.log(methodName + " Test Method Executed Successfully"); //TestNG report
+		
+		//Logging status Pass in the extent report for the test method getting executed successfully
+		test.log(Status.PASS, methodName+" -- Executed successfully"); //Extent report
 	}
 
 	@Override
@@ -40,10 +50,17 @@ public class ListenersImplementation implements ITestListener {
 		String methodName = result.getMethod().getMethodName();
 		System.out.println(methodName + " Test Method Failed");
 		Reporter.log(methodName + " Test Method Failed");
-				
+		
+		//Logging status Pass in the extent report for the test method getting executed successfully		
+		test.log(Status.FAIL, methodName+" --Failed");
+		//Logging INFORMATION i.e. the throwable message in the extent report for the failed test method 
+		test.log(Status.INFO, result.getThrowable());	
+		
+		//Creating screenshot name unique with method name and date-time
 		String screenshotName = methodName+": "+dateTimeStamp;
 		SeleniumUtility sUtil = new SeleniumUtility();
 		try {
+			//Capturing screenshot if the web-page for a failed test method
 			sUtil.takeScreenshotOfWebPage(BaseClass.sDriver, screenshotName);
 		} catch (IOException e) {
 			e.printStackTrace();
