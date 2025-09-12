@@ -29,7 +29,7 @@ public class ListenersImplementation implements ITestListener {
 		System.out.println(methodName + " Test Method Started");
 		Reporter.log(methodName + " Test Method Started");
 		
-		//Creating field in the extent reports for every method getting executed
+		//Creating field in the extent reports for every method getting executed (Important)
 		test = reports.createTest(methodName);
 	}
 
@@ -60,8 +60,10 @@ public class ListenersImplementation implements ITestListener {
 		String screenshotName = methodName+": "+dateTimeStamp;
 		SeleniumUtility sUtil = new SeleniumUtility();
 		try {
-			//Capturing screenshot if the web-page for a failed test method
-			sUtil.takeScreenshotOfWebPage(BaseClass.sDriver, screenshotName);
+			//Capturing screenshot of the web-page for a failed test method
+			String path = sUtil.takeScreenshotOfWebPage(BaseClass.sDriver, screenshotName);
+			//Attaching screenshot to Extent Report for failed Test Method
+			test.addScreenCaptureFromPath(path);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -73,6 +75,9 @@ public class ListenersImplementation implements ITestListener {
 		String methodName = result.getMethod().getMethodName();
 		System.out.println(methodName + " Test Method Skipped");
 		Reporter.log(methodName + " Test Method Skipped");
+		
+		//Logging status Skip in the extent report for the test method getting skipped		
+		test.log(Status.SKIP, methodName+" --Skipped");
 	}
 
 	@Override
@@ -89,11 +94,13 @@ public class ListenersImplementation implements ITestListener {
 	public void onStart(ITestContext context) {
 		System.out.println("Suite Execution Started");
 		
+		//Configuring the extent report i.e. setting name, path and other configuration
 		ExtentSparkReporter reporter = new ExtentSparkReporter("./Extent Reports/report: "+dateTimeStamp+".html");
 		reporter.config().setDocumentTitle("VTiger Execution Reports");
 		reporter.config().setReportName("VTiger Report");
 		reporter.config().setTheme(Theme.DARK);
 		
+		//Generating an empty Extent Report with all the configuration done using ExtentSparkReporter
 		reports = new ExtentReports();
 		reports.attachReporter(reporter);
 		reports.setSystemInfo("Base URL", "https://localhost");
@@ -105,6 +112,8 @@ public class ListenersImplementation implements ITestListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		System.out.println("Suite Execution Ended");
+		
+		//Flushing the Extent Report to the specific location (Compulsory)
 		reports.flush();
 	}
 

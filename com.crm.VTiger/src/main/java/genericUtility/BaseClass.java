@@ -49,7 +49,10 @@ public class BaseClass {
 			driver = new FirefoxDriver();
 		}
 		else if (browser.equals("edge"))
+		{	
+//			System.setProperty("webdriver.edge.driver", "absolute path of .exe file");
 			driver = new EdgeDriver();
+		}
 		else
 			driver = new ChromeDriver();
 		sDriver = driver;
